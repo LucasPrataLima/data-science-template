@@ -1,86 +1,70 @@
-# Modelo de projeto de ciência de dados
+# Data Science Project Template
 
-Modelo de projeto de ciência de dados para ser utilizado como referência em projetos
-futuros. Desenvolvido por mim, [Francisco Bustamante](https://github.com/chicolucio),
-para alunos iniciantes em ciência de dados de meus cursos e mentorias.
+A data science project template to be used as a reference for future projects. 
+Developed by me, [Francisco Bustamante](https://github.com/chicolucio), for beginner 
+data science students in my courses and mentorship programs.
 
-Inspiração: [Cookiecutter Data Science](https://drivendata.github.io/cookiecutter-data-science/)
+Inspiration: [Cookiecutter Data Science](https://drivendata.github.io/cookiecutter-data-science/)
 
-Clique no botão **Use this template** para criar um novo repositório com base neste modelo.
+Click the **Use this template** button to create a new repository based on this model.
 
-## Organização do projeto
+## Project Structure
 
 ```
-├── .env               <- Arquivo de variáveis de ambiente (não versionar)
-├── .gitignore         <- Arquivos e diretórios a serem ignorados pelo Git
-├── ambiente.yml       <- O arquivo de requisitos para reproduzir o ambiente de análise
-├── LICENSE            <- Licença de código aberto se uma for escolhida
-├── README.md          <- README principal para desenvolvedores que usam este projeto.
+├── .env                <- Environment variables file (do not commit/version)
+├── .gitignore          <- Files and directories to be ignored by Git
+├── environment.yml     <- Requirements file to reproduce the analysis environment
+├── LICENSE             <- Open-source license (if one is chosen)
+├── README.md           <- The main README for developers using this project.
 |
-├── dados              <- Arquivos de dados para o projeto.
+├── data                <- Data files for the project.
 |
-├── modelos            <- Modelos treinados e serializados, previsões de modelos ou resumos de modelos
+├── models              <- Trained and serialized models, model predictions, or model summaries
 |
-├── notebooks          <- Cadernos Jupyter. A convenção de nomenclatura é um número (para ordenação),
-│                         as iniciais do criador e uma descrição curta separada por `-`, por exemplo
-│                         `01-fb-exploracao-inicial-de-dados`.
+├── notebooks           <- Jupyter notebooks. The naming convention is a number (for ordering),
+│                          the creator's initials, and a short description separated by -, e.g.,
+│                          01-fb-initial-data-exploration.
 │
-|   └──src             <- Código-fonte para uso neste projeto.
+|   └──src              <- Source code for use in this project.
 |      │
-|      ├── __init__.py  <- Torna um módulo Python
-|      ├── config.py    <- Configurações básicas do projeto
-|      └── graficos.py  <- Scripts para criar visualizações exploratórias e orientadas a resultados
+|      ├── init.py  <- Makes it a Python module
+|      ├── config.py    <- Basic project configurations
+|      └── plots.py     <- Scripts to create exploratory and results-oriented visualizations
 |
-├── referencias        <- Dicionários de dados, manuais e todos os outros materiais explicativos.
+├── references          <- Data dictionaries, manuals, and all other explanatory materials.
 |
-├── relatorios         <- Análises geradas em HTML, PDF, LaTeX, etc.
-│   └── imagens        <- Gráficos e figuras gerados para serem usados em relatórios
+├── reports             <- Generated analyses in HTML, PDF, LaTeX, etc.
+│   └── images          <- Generated graphics and figures to be used in reports
 ```
 
-## Configuração do ambiente
+## Environment Setup
 
-1. Faça o clone do repositório que será criado a partir deste modelo.
+1. Clone the repository that will be created from this template.
 
     ```bash
-    git clone ENDERECO_DO_REPOSITORIO
+    git clone REPOSITORY_URL
     ```
 
-2. Crie um ambiente virtual para o seu projeto utilizando o gerenciador de ambientes de sua preferência.
+2. Create a virtual environment for your project using your preferred environment manager.
 
-    a. Caso esteja utilizando o `conda`, exporte as dependências do ambiente para o arquivo `ambiente.yml`:
+    a. If you are using `conda`, export the environment dependencies to the `environment.yml` file:
 
       ```bash
-      conda env export > ambiente.yml
+      conda env export > environment.yml
       ```
 
-    b. Caso esteja utilizando outro gerenciador de ambientes, exporte as dependências
-    para o arquivo `requirements.txt` ou outro formato de sua preferência. Adicione o
-    arquivo ao controle de versão, removendo o arquivo `ambiente.yml`.
+    b. If you are using another environment manager, export the dependencies to a `requirements.txt` file or any other format of your choice. Add the file to version control and remove the `environment.yml` file.
 
-3. Verifique o arquivo `notebooks/01-fb-exemplo.ipynb` para exemplos
-de uso do código.
-4. Renomeie o arquivo `notebooks/01-fb-exemplo.ipynb` para um nome
-mais apropriado ao seu projeto. E siga a convenção de nomenclatura para os demais
-notebooks.
-5. Remova arquivos de exemplo e adicione os arquivos de dados e notebooks do seu
-projeto.
-6. Verifique o arquivo `notebooks/src/config.py` para configurações básicas do projeto.
-Modifique conforme necessário, adicionando ou removendo caminhos de arquivos e
-diretórios.
-7. Atualize o arquivo `referencias/01_dicionario_de_dados.md` com o dicionário de dados
-do seu projeto.
-8. Atualize o `README.md` com informações sobre o seu projeto.
-9. Adicione uma licença ao projeto. Clique
-[aqui](https://docs.github.com/pt/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
-se precisar de ajuda para escolher uma licença.
-10. Renomeie o arquivo `.env.exemplo` para `.env`
-11. Adicione variáveis de ambiente sensíveis ao arquivo `.env`.
+3. Check the `notebooks/01-fb-example.ipynb` file for code usage examples.
+4. Rename `notebooks/01-fb-example.ipynb` to a name more appropriate for your project, and follow the naming convention for subsequent notebooks.
+5. Remove example files and add your project's data files and notebooks.
+6. Check the `notebooks/src/config.py` file for basic project configurations. Modify as needed, adding or removing file and directory paths.
+7. Update the `references/01_data_dictionary.md` file with your project's data dictionary.
+8. Update the `README.md` with information about your specific project.
+9. Add a license to the project. Click [here](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository) if you need help choosing a license.
+10. Rename the `.env.example` file to `.env`.
+11. Add sensitive environment variables to the `.env` file.
 
-Por padrão, o arquivo `.gitignore` já está configurado para ignorar arquivos de dados e
-arquivos de Notebook (para aqueles que usam ferramentas como
-[Jupytext](https://jupytext.readthedocs.io/en/latest/) e similares). Adicione ou remova
-outros arquivos e diretórios do `.gitignore` conforme necessário. Caso deseje adicionar
-forçadamente um Notebook ao controle de versão, faça um commit forçado com o
-comando `git add --force NOME_DO_ARQUIVO.ipynb`.
+By default, the `.gitignore` file is already configured to ignore data files and Notebook files (for those using tools like [Jupytext](https://jupytext.readthedocs.io/en/latest/) and similar). Add or remove other files and directories from `.gitignore` as needed. If you want to force-add a Notebook to version control, perform a forced commit using the command `git add --force FILENAME.ipynb`.
 
-Para mais informações sobre como usar Git e GitHub, [clique aqui](https://cienciaprogramada.com.br/2021/09/guia-definitivo-git-github/). Sobre ambientes virtuais, [clique aqui](https://cienciaprogramada.com.br/2020/08/ambiente-virtual-projeto-python/).
+For more information on how to use Git and GitHub, [click here](https://cienciaprogramada.com.br/2021/09/guia-definitivo-git-github/). For virtual environments, [click here](https://cienciaprogramada.com.br/2020/08/ambiente-virtual-projeto-python/).
